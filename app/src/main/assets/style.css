@@ -185,3 +185,328 @@ html, body {
 .fab-menu {
   z-index: 60 !important;
 }
+
+/* زر التراجع */
+.fab-undo {
+  position: fixed;
+  bottom: 30px;
+  right: 96px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(21, 21, 31, 0.9);
+  color: #9c88ff;
+  border: 2px solid #9c88ff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  backdrop-filter: blur(8px);
+  opacity: 0.35;
+}
+.fab-undo:active { transform: scale(0.9); background: #9c88ff; color: #14042e; }
+.fab-undo.active { opacity: 1; box-shadow: 0 4px 14px rgba(156,136,255,0.5); }
+
+/* زر لقطة الشاشة */
+.fab-shot {
+  position: fixed;
+  bottom: 90px;
+  right: 22px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(21, 21, 31, 0.9);
+  color: #00d2a8;
+  border: 2px solid #00d2a8;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  backdrop-filter: blur(8px);
+}
+.fab-shot:active { transform: scale(0.9); background: #00d2a8; color: #14042e; }
+
+/* نقل زر التراجع والتصوير إلى اليسار */
+.fab-undo {
+  left: 24px !important;
+  right: auto !important;
+  bottom: 24px !important;
+  opacity: 1 !important;
+}
+.fab-shot {
+  left: 24px !important;
+  right: auto !important;
+  bottom: 88px !important;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #9c88ff, #6b5bd6);
+  color: #14042e;
+  border: none;
+  cursor: pointer;
+  z-index: 150;
+  box-shadow: 0 6px 20px rgba(156,136,255,0.5);
+  transition: all 0.2s;
+}
+.toggle-btn:active { transform: scale(0.95); }
+.toggle-btn.hidden { display: none !important; }
+.toggle-btn.open {
+  background: linear-gradient(135deg, #ff6b6b, #c94b4b);
+  color: #fff;
+}
+
+/* زر الخصائص (أسفل زر الفتح) */
+.props-btn {
+  position: fixed;
+  top: 74px;
+  left: 16px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00d2a8, #008a6e);
+  color: #00201a;
+  border: none;
+  cursor: pointer;
+  z-index: 150;
+  box-shadow: 0 6px 20px rgba(0,210,168,0.5);
+  transition: all 0.2s;
+}
+.props-btn:active { transform: scale(0.95); }
+.props-btn.hidden { display: none !important; }
+
+/* ===== توحيد كل الأزرار ===== */
+button,
+.fab-item,
+.tool,
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.um-btn,
+.toggle-btn,
+.props-btn,
+.fab-main,
+.fab-undo,
+.fab-shot {
+  padding: 12px 20px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: all 0.15s !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  border: 2px solid transparent !important;
+}
+
+/* أزرار دائرية - تصغير فقط */
+.fab-main,
+.fab-undo,
+.fab-shot {
+  width: 52px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  font-size: 22px !important;
+}
+
+/* الأزرار الدائرية تبقى كما هي في مواضعها */
+.fab-main { bottom: 24px !important; right: 24px !important; }
+.fab-undo { bottom: 24px !important; left: 24px !important; }
+.fab-shot { bottom: 88px !important; left: 24px !important; }
+
+/* الأزرار العادية */
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.toggle-btn,
+.props-btn {
+  width: 100% !important;
+  margin-top: 8px !important;
+}
+
+/* الأزرار الفرعية في البطاقات */
+.item-card {
+  min-height: 90px !important;
+}
+
+/* الأزرار في شريط الأزرار (FAB menu) */
+.fab-item {
+  min-width: 66px !important;
+  min-height: 66px !important;
+  padding: 6px !important;
+  border-radius: 14px !important;
+}
+
+/* ===== كل الأزرار دوائر ===== */
+.fab-main,
+.fab-undo,
+.fab-shot,
+.fab-item,
+.toggle-btn,
+.props-btn,
+.icon-btn {
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  min-height: 56px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 2px solid !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35) !important;
+  overflow: hidden !important;
+}
+
+/* الزر الرئيسي - بنفسجي دائري */
+.fab-main {
+  background: linear-gradient(135deg, #9c88ff, #6b5bd6) !important;
+  color: #14042e !important;
+  border-color: transparent !important;
+  font-size: 26px !important;
+}
+.fab-main.open {
+  transform: rotate(45deg) !important;
+  background: linear-gradient(135deg, #9c88ff, #6b5bd6) !important;
+  color: #14042e !important;
+}
+
+/* لقطة الشاشة - أخضر تركوازي */
+.fab-shot {
+  background: rgba(21, 21, 31, 0.95) !important;
+  color: #00d2a8 !important;
+  border-color: #00d2a8 !important;
+  font-size: 24px !important;
+}
+
+/* التراجع - بنفسجي */
+.fab-undo {
+  background: rgba(21, 21, 31, 0.95) !important;
+  color: #9c88ff !important;
+  border-color: #9c88ff !important;
+  font-size: 26px !important;
+}
+
+/* أزرار القائمة (إضافة، ألوان...) - دوائر بأيقونات فقط */
+.fab-item {
+  background: rgba(21, 21, 31, 0.95) !important;
+  color: #ededf5 !important;
+  border-color: rgba(156, 136, 255, 0.5) !important;
+  font-size: 24px !important;
+  position: relative !important;
+}
+
+.fab-item .fi-lbl {
+  display: none !important;
+}
+
+.fab-item .fi-ico {
+  font-size: 24px !important;
+  line-height: 1 !important;
+}
+
+.fab-item:hover,
+.fab-item:active {
+  background: #9c88ff !important;
+  color: #14042e !important;
+  border-color: #9c88ff !important;
+  transform: scale(1.1) !important;
+}
+
+/* زر الفتح - دائري بنفسجي */
+.toggle-btn {
+  background: linear-gradient(135deg, #9c88ff, #6b5bd6) !important;
+  color: #14042e !important;
+  border-color: transparent !important;
+  font-size: 22px !important;
+  top: 16px !important;
+  left: 16px !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+.toggle-btn.open {
+  background: linear-gradient(135deg, #ff6b6b, #c94b4b) !important;
+  color: #fff !important;
+}
+
+/* زر الخصائص - دائري أخضر */
+.props-btn {
+  background: linear-gradient(135deg, #00d2a8, #008a6e) !important;
+  color: #00201a !important;
+  border-color: transparent !important;
+  font-size: 22px !important;
+  top: 80px !important;
+  left: 16px !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+/* أيقونات الأزرار (المحتوى) */
+.fab-item[data-panel="add"]::after { content: none; }
+.fab-item[data-panel="add"] .fi-ico { content: "➕"; }
+
+/* إعادة ترتيب مواقع الأزرار */
+.fab-shot { bottom: 88px !important; left: 24px !important; }
+.fab-undo { bottom: 24px !important; left: 24px !important; }
+.fab-main { bottom: 24px !important; right: 24px !important; }
+
+/* الشريط السفلي: أزرار القائمة الأفقية */
+#fab-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 600px) {
+  .fab-main, .fab-undo, .fab-shot, .fab-item, .toggle-btn, .props-btn {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    font-size: 20px !important;
+  }
+}
+
+/* إخفاء نصوص الأزرار */
+.fi-lbl { display: none !important; }
+
+/* منع تجاوز النص */
+.fab-item { position: relative !important; }
+
+/* زر الفتح - أيقونة فقط */
+.toggle-btn,
+.props-btn {
+  font-size: 24px !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+/* إزالة الهامش من الأزرار الدائرية */
+#fab-menu { margin: 0 !important; padding: 0 !important; }

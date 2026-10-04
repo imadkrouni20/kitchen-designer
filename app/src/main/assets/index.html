@@ -13,14 +13,16 @@
 <!-- زر عائم -->
 <div id="fab-wrap">
   <div id="fab-menu" class="fab-menu hidden">
-    <button class="fab-item" data-panel="add"><span class="fi-ico">➕</span><span class="fi-lbl">إضافة</span></button>
-    <button class="fab-item" data-panel="colors"><span class="fi-ico">🎨</span><span class="fi-lbl">ألوان</span></button>
-    <button class="fab-item" data-panel="list"><span class="fi-ico">📦</span><span class="fi-lbl">العناصر</span></button>
-    <button class="fab-item" data-panel="room"><span class="fi-ico">🏠</span><span class="fi-lbl">الغرفة</span></button>
-    <button class="fab-item" data-panel="cut"><span class="fi-ico">📋</span><span class="fi-lbl">القص</span></button>
-    <button class="fab-item" data-panel="io"><span class="fi-ico">💾</span><span class="fi-lbl">ملف</span></button>
+    <button class="fab-item" data-panel="add"><span class="fi-ico">➕</span></button>
+    <button class="fab-item" data-panel="colors"><span class="fi-ico">🎨</span></button>
+    <button class="fab-item" data-panel="list"><span class="fi-ico">📦</span></button>
+    <button class="fab-item" data-panel="room"><span class="fi-ico">🏠</span></button>
+    <button class="fab-item" data-panel="cut"><span class="fi-ico">📋</span></button>
+    <button class="fab-item" data-panel="io"><span class="fi-ico">💾</span></button>
   </div>
-  <button id="fab-main" class="fab-main"><span>☰</span></button>
+  <button id="fab-shot" class="fab-shot" title="لقطة شاشة">📷</button>
+<button id="fab-undo" class="fab-undo" title="تراجع">↶</button>
+<button id="fab-main" class="fab-main"><span>☰</span></button>
 </div>
 
 <!-- لوحة -->
@@ -46,5 +48,7 @@
 <script src="three.min.js"></script>
 <script src="OrbitControls.js"></script>
 <script src="app.js"></script>
+<button id="toggle-btn" class="toggle-btn hidden" title="فتح/إغلاق">🔓</button>
+<button id="props-btn" class="props-btn hidden" title="خصائص">⚙</button>
 </body>
 </html>
